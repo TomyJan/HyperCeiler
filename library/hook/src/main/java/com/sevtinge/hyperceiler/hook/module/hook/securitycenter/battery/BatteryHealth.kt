@@ -70,7 +70,8 @@ object BatteryHealth : BaseHook() {
 
     override fun init() {
         getSecurityBatteryHealth.createAfterHook { param ->
-            health = param.args[0] as Int // 获取手机管家内部的健康度
+            health = 74 // 固定显示 74%
+            // health = param.args[0] as Int // 获取手机管家内部的健康度
         }
 
         findMethod.createAfterHook { param ->
